@@ -10,7 +10,7 @@ public class DotComTest {
         // (3 consecutive ints out of a possible 7)
         int[] locations = {2, 3, 4};
         // invoke the setter method on the dot com
-        dot.setLocationCells(locations);
+        //dot.setLocationCells(locations);
 
         // make a fake guess
         String userGuess = "2";
