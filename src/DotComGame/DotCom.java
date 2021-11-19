@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class DotCom {
 
     private ArrayList<String> locationCells;
-    private name;
-
-    public DotCom(String name){
-        this.name = name;
-    }
+    private String name;
 
     public void setLocationCells(ArrayList<String> loc){
         locationCells = loc;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     public String checkYourself(String userInput){
@@ -23,12 +23,11 @@ public class DotCom {
             locationCells.remove(index);
             if (locationCells.isEmpty()){
                 result = "kill";
+                System.out.println("Ouch! You sunk " + name + "   :( ");
             } else {
                 result = "hit";
             }
         }
-
-        System.out.println(result);
         return result;
     }
 }

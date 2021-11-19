@@ -8,12 +8,13 @@ public class DotComBust {
     private int numOfGuesses = 0;
 
     public void setUpGame(){
-        // make three DotCom objects and name them
-        DotCom one = new DotCom("Go2.com");
-        DotCom two = new DotCom("Pets.com");
-        DotCom three = new DotCom("eToys.com");
+        DotCom one = new DotCom();
+        one.setName("Go2.com");
+        DotCom two = new DotCom();
+        two.setName("Pets.com");
+        DotCom three = new DotCom();
+        three.setName("eToys.com");
 
-        // add them to the list
         dotComsList.add(one);
         dotComsList.add(two);
         dotComsList.add(three);
