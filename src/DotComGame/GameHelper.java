@@ -1,4 +1,4 @@
-package simpleDotComGame;
+package DotComGame;
 import java.io.*;
 
 public class GameHelper {

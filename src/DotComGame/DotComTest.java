@@ -1,10 +1,10 @@
-package simpleDotComGame;
+package DotComGame;
 
-public class SimpleDotComTest {
+public class DotComTest {
     public static void main(String[] args) {
 
         // instantiate a SimpleDotCom object
-        SimpleDotCom dot = new SimpleDotCom();
+        DotCom dot = new DotCom();
 
         // make an int array for the location of the dot com
         // (3 consecutive ints out of a possible 7)

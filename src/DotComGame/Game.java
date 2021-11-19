@@ -1,6 +1,4 @@
-package simpleDotComGame;
-
-import java.util.Scanner;
+package DotComGame;
 
 public class Game {
     public static void main(String[] args){
@@ -23,7 +21,7 @@ public class Game {
         int numOfGuesses = 0;
         GameHelper helper = new GameHelper();
 
-        SimpleDotCom theDotCom = new SimpleDotCom();
+        DotCom theDotCom = new DotCom();
         int randomNum = (int)(Math.random() * 5);
 
         int[] locations = {randomNum, randomNum + 1, randomNum + 2};
