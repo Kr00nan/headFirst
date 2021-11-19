@@ -36,12 +36,37 @@ public class DotComBust {
         finishGame();
     }
 
-    public void checkUserGuess(){
-        // loops through all remaining DotCom objects
-        // calls each DotCom object's checkYourself() method
+    public void checkUserGuess(String userGuess){
+        numOfGuesses++;
+        String result = "miss";
+
+        for (DotCom dotComToTest : dotComsList){
+            result = dotComToTest.checkYourself(userGuess);
+            if (result.equals("hit")){
+                break;
+            }
+            if (result.equals("kill")){
+                dotComsList.remove(dotComToTest);
+                break;
+            }
+        }
+        System.out.println(result);
     }
 
     public void finishGame(){
-        // prints a message about the user's performance, based on how many guesses it took to sink all the DotComs
+        System.out.println("All Dot Coms are dead! Your stock is now worthless.");
+        if (numOfGuesses <= 18){
+            System.out.println("It only took you " + numOfGuesses + " guesses.");
+            System.out.println(" You got out before your options sank.");
+        } else {
+            System.out.println("Took you long enough. " + numOfGuesses + " guesses.");
+            System.out.println("Fish are dancing with your options.");
+        }
+    }
+
+    public static void main(String[] args){
+        DotComBust game = new DotComBust();
+        game.setUpGame();
+        game.startPlaying();
     }
 }
