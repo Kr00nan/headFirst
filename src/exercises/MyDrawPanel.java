@@ -43,9 +43,20 @@ class MyDrawPanel extends JPanel {
         blue = (int) (Math.random() * 256);
         Color endColor = new Color(red, green, blue);
 
+        // randomizes the size of the circle
+        int randSize = (int) (Math.random() * this.getWidth());
+
+        // randomize the location of the circle
+        int randX = (int) (Math.random() * this.getWidth() - randSize);
+        int randY = (int) (Math.random() * this.getHeight() - randSize);
+
+        // keep circle within the boundaries of the window
+        if (randX < 0) { randX = 0; }
+        if (randY < 0) { randY = 0; }
+
         GradientPaint gradient = new GradientPaint(70, 70, startColor, 150, 150, endColor);
         g2d.setPaint(gradient);
-        g2d.fillOval(70, 70, 100, 100);
+        g2d.fillOval(randX, randY, randSize, randSize);
 
     }
 }
