@@ -14,11 +14,12 @@ public class SimpleGui1B implements ActionListener {
 
     public void go() {
         JFrame frame = new JFrame();
+        // creates button, assigns listener, adds to frame
 //        button = new JButton("click me");
-//
 //        button.addActionListener(this);
-//
 //        frame.getContentPane().add(button);
+
+        // creates panel, adds to frame
         panel = new MyDrawPanel();
         frame.getContentPane().add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
