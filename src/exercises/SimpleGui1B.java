@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class SimpleGui1B implements ActionListener {
     JButton button;
-    JPanel panel;
+    MyDrawPanel panel;
 
     public static void main(String[] args) {
         SimpleGui1B gui = new SimpleGui1B();
@@ -14,11 +14,13 @@ public class SimpleGui1B implements ActionListener {
 
     public void go() {
         JFrame frame = new JFrame();
-        button = new JButton("click me");
-
-        button.addActionListener(this);
-
-        frame.getContentPane().add(button);
+//        button = new JButton("click me");
+//
+//        button.addActionListener(this);
+//
+//        frame.getContentPane().add(button);
+        panel = new MyDrawPanel();
+        frame.getContentPane().add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 300);
         frame.setVisible(true);
