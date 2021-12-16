@@ -56,7 +56,8 @@ class MyDrawPanel extends JPanel {
 
         GradientPaint gradient = new GradientPaint(70, 70, startColor, 150, 150, endColor);
         g2d.setPaint(gradient);
-        g2d.fillOval(randX, randY, randSize, randSize);
+        g2d.fillOval(70, 70, 100, 100);
+//        g2d.fillOval(randX, randY, randSize, randSize);
 
     }
 }
