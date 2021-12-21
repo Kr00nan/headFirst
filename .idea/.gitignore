@@ -3,7 +3,10 @@
 /workspace.xml
 # Compiled class file
 *.class
+
+# Files created when running certain exercises
 *.ser
+*.txt
 
 # Log file
 *.log
