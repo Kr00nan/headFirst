@@ -3,8 +3,20 @@ package chapter14;
 import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.*;
+import java.awt.*;
 
 public class QuizCardBuilder {
+
+    private JTextArea question;
+    private JTextArea answer;
+    private ArrayList<QuizCard> cardList;
+    private JFrame frame;
+
+    public static void main(String[] args) {
+        QuizCardBuilder builder = new QuizCardBuilder();
+        builder.go();
+    }
     public void go() {
         // build and display gui
     }
@@ -26,6 +38,12 @@ public class QuizCardBuilder {
         public void actionPerformed(ActionEvent a) {
             // clear out the card list, and clear out the text areas
         }
+    }
+
+    private void clearCard() {
+        question.setText("");
+        answer.setText("");
+        question.requestFocus();
     }
 
     private void saveFile(File file) {
