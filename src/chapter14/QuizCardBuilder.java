@@ -82,8 +82,6 @@ public class QuizCardBuilder {
 
     private class SaveMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent a) {
-            QuizCard card = new QuizCard(question.getText(), answer.getText());
-            cardList.add(card);
 
             // bring up a file dialog box
             JFileChooser fileSave = new JFileChooser();
