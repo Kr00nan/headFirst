@@ -114,7 +114,7 @@ public class QuizCardBuilder {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
             for(QuizCard card : cardList) {
-                writer.write(card.getQuestion() + " / ");
+                writer.write(card.getQuestion() + "/");
                 writer.write(card.getAnswer() + "\n");
             }
             writer.close();

@@ -96,7 +96,7 @@ public class QuizCardPlayer {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             while ((line = reader.readLine()) != null) {
-                // (one line in the file holds both the question and answer, separated by a " / "
+                // (one line in the file holds both the question and answer, separated by a "/"
                 makeCard(line);
             }
             reader.close();
@@ -109,7 +109,7 @@ public class QuizCardPlayer {
 
     private void makeCard(String lineToParse) {
         // called by the loadFile method, takes a line from the text file
-        String[] result = lineToParse.split(" / ");
+        String[] result = lineToParse.split("/");
         // and parses into two pieces--question and answer--and creates a new QuizCard
         QuizCard card = new QuizCard(result[0], result[1]);
         // and adds it to the ArrayList called CardList
