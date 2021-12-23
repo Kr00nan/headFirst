@@ -20,7 +20,6 @@ public class QuizCardBuilder {
     public void go() {
         // build and display gui
         frame = new JFrame("Quiz Card Builder");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
         Font bigFont = new Font("sanserif", Font.BOLD, 24);
@@ -68,6 +67,7 @@ public class QuizCardBuilder {
         frame.setJMenuBar(menuBar);
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
         frame.setSize( 500, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
