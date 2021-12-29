@@ -1,4 +1,4 @@
-package guessing_game;
+package chapter1;
 
 public class GuessGame {
 
@@ -15,9 +15,9 @@ public class GuessGame {
         p3 = new Player();
 
         // variables to hold the guesses the Players make
-        int guessP1 = 0;
-        int guessP2 = 0;
-        int guessP3 = 0;
+        int guessP1;
+        int guessP2;
+        int guessP3;
 
         boolean p1Right = false;
         boolean p2Right = false;

@@ -1,4 +1,4 @@
-package DotComGame;
+package chapter6;
 
 import java.util.ArrayList;
 

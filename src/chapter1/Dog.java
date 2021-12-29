@@ -1,4 +1,6 @@
-package exercises;
+package chapter1;
+
+import chapter8.Animal;
 
 class Dog extends Animal {
     int size;

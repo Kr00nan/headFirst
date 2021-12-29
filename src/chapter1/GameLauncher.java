@@ -1,4 +1,4 @@
-package guessing_game;
+package chapter1;
 
 public class GameLauncher {
     public static void main(String[] args) {

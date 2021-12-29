@@ -1,4 +1,4 @@
-package exercises;
+package chapter8;
 
 public class Cat extends Animal {
     int size;

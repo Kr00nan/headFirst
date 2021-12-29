@@ -1,4 +1,4 @@
-package guessing_game;
+package chapter1;
 
 public class Player {
     int number = 0;

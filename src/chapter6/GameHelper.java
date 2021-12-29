@@ -1,4 +1,4 @@
-package DotComGame;
+package chapter6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,11 +29,11 @@ public class GameHelper {
     public ArrayList<String> placeDotCom(int comSize){
         ArrayList<String> alphaCells = new ArrayList<>();
 
-        String temp = null;
+        String temp;
         int [] coords = new int[comSize];
         int attempts = 0;
         boolean success = false;
-        int location = 0;
+        int location;
 
         comCount++;
         int incr = 1;
@@ -64,12 +64,12 @@ public class GameHelper {
         }
 
         int x = 0;
-        int row = 0;
-        int column = 0;
+        int row;
+        int column;
         //System.out.println("\n");
         while (x < comSize){
             grid[coords[x]] = 1;
-            row = (int) (coords[x] / gridLength);
+            row = coords[x] / gridLength;
             column = coords[x] % gridLength;
             temp = String.valueOf(alphabet.charAt(column));
 

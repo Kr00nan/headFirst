@@ -1,4 +1,4 @@
-package exercises;
+package chapter8;
 
 public class MyAnimalList {
     private Animal[] animals = new Animal[5];

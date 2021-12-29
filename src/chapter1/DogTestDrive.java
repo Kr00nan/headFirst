@@ -1,4 +1,7 @@
-package exercises;
+package chapter1;
+
+import chapter8.Cat;
+import chapter8.MyAnimalList;
 
 class DogTestDrive {
     public static void main(String[] args){

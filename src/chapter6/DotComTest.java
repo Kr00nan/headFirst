@@ -1,4 +1,4 @@
-package DotComGame;
+package chapter6;
 
 public class DotComTest {
     public static void main(String[] args) {
