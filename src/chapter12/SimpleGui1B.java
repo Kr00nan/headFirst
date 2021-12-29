@@ -1,4 +1,4 @@
-package exercises;
+package chapter12;
 
 import javax.swing.*;
 import java.awt.event.*;

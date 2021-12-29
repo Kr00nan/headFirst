@@ -1,4 +1,4 @@
-package musicapp;
+package chapter13;
 
 import java.awt.*;
 import javax.swing.*;
@@ -107,7 +107,7 @@ public class BeatBox {
     }
 
     public void buildTrackAndStart() {
-        int[] trackList = null;
+        int[] trackList;
 
         sequence.deleteTrack(track);
         track = sequence.createTrack();

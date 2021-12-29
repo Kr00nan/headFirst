@@ -1,7 +1,6 @@
-package musicapp;
+package chapter12;
 
 import javax.sound.midi.*;
-import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -33,7 +32,7 @@ public class MiniMusicPlayer3 {
             Sequence seq = new Sequence(Sequence.PPQ, 4);
             Track track = seq.createTrack();
 
-            int r = 0;
+            int r;
             for (int i = 0; i < 60; i+= 4) {
                 r = (int) ((Math.random() * 50) + 1);
                 track.add(makeEvent(144, 1, r, 100, i));
@@ -53,7 +52,7 @@ public class MiniMusicPlayer3 {
             ShortMessage a = new ShortMessage();
             a.setMessage(cond, chan, one, two);
             event = new MidiEvent(a, tick);
-        } catch (Exception ex) { };
+        } catch (Exception ex) { ex.printStackTrace(); }
         return event;
     }
 
@@ -80,7 +79,7 @@ public class MiniMusicPlayer3 {
                 int x = (int) ((Math.random() * 40) + 10);
                 int y = (int) ((Math.random() * 40) + 10);
 
-                g.fillRect(x, y, height, width);
+                g.fillRect(x, y, width, height);
                 msg = false;
             }
         }

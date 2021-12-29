@@ -1,4 +1,4 @@
-package musicapp;
+package chapter11;
 
 import javax.sound.midi.*;
 

@@ -1,4 +1,4 @@
-package exercises;
+package chapter12;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,7 +31,7 @@ public class SimpleAnimation {
 
             try {
                 Thread.sleep(50);
-            } catch (Exception ex) {}
+            } catch (Exception ex) { ex.printStackTrace(); }
         }
     }
 

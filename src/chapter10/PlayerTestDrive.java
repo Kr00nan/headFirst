@@ -1,4 +1,4 @@
-package exercises;
+package chapter10;
 
 public class PlayerTestDrive {
     public static void main(String[] args) {

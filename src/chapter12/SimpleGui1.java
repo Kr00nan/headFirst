@@ -1,4 +1,4 @@
-package exercises;
+package chapter12;
 import javax.swing.*;
 public class SimpleGui1 {
     public static void main(String[] args) {
