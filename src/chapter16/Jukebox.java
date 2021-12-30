@@ -3,12 +3,19 @@ package chapter16;
 import java.util.*;
 import java.io.*;
 
-public class Jukebox1 {
+public class Jukebox {
 
     ArrayList<Song> songList = new ArrayList<>();
 
     public static void main(String[] args) {
-        new Jukebox1().go();
+        new Jukebox().go();
+    }
+
+    class ArtistCompare implements Comparator<Song> {
+        @Override
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
     }
 
     public void go() {
@@ -16,13 +23,17 @@ public class Jukebox1 {
         System.out.println(songList);
         Collections.sort(songList);
         System.out.println(songList);
+
+        ArtistCompare artistCompare = new ArtistCompare();
+        Collections.sort(songList, artistCompare);
+        System.out.println(songList);
     }
 
     public void getSongs() {
         try {
             File file = new File("SongListMore.txt");
             BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                 addSong(line);
             }
