@@ -20,18 +20,27 @@ public class Jukebox {
 
     public void go() {
         getSongs();
-        System.out.println(songList);
-        Collections.sort(songList);
-        System.out.println(songList);
 
+        // prints out as read from the text file
+        System.out.println("\n" +songList);
+
+        // prints out as default sorted using Comparable
+        Collections.sort(songList);
+        System.out.println("\n" +songList);
+
+        // prints out as sorted using Comparator by artist
         ArtistCompare artistCompare = new ArtistCompare();
         Collections.sort(songList, artistCompare);
-        System.out.println(songList);
+        System.out.println("\n" +songList);
+
+        // new collection using HashSet to remove duplicates
+        HashSet<Song> songSet = new HashSet<>(songList);
+        System.out.println(songSet);
     }
 
     public void getSongs() {
         try {
-            File file = new File("SongListMore.txt");
+            File file = new File("SongList_v3.txt");
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             while ((line = reader.readLine()) != null) {
