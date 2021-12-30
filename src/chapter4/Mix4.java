@@ -1,4 +1,4 @@
-package exercises;
+package chapter4;
 
 public class Mix4 {
     int counter = 0;
