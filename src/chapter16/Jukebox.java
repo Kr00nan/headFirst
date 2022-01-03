@@ -35,7 +35,7 @@ public class Jukebox {
 
         // new collection using HashSet to remove duplicates
         HashSet<Song> songSet = new HashSet<>(songList);
-        System.out.println(songSet);
+        System.out.println("\n" + songSet);
     }
 
     public void getSongs() {
